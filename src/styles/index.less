@@ -1,0 +1,143 @@
+@screen-small-max : 767px;
+@screen-medium : 768px;
+@screen-medium-max : 1023px;
+@screen-large : 1024px;
+@screen-large-max : 1199px;
+@screen-wide : 1200px;
+
+* {
+  box-sizing: border-box;
+}
+
+ul, ol {
+  margin: 0;
+  padding-left: 16px;
+  @media (min-width: @screen-medium) {
+    padding-left: 40px;
+  }
+}
+
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1200;
+}
+.loading-element {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 140px;
+  height: 140px;
+  z-index: 1;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  @media (min-width: @screen-medium) {
+    margin: 200px auto;
+  }
+  position: relative;
+  &__form {
+    padding: 0 50px 50px;
+    text-align: center;
+  }
+  &__sign-in {
+    margin-top: 30px;
+    width: 100%;
+  }
+  &__forgot-password {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.home-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  @media (min-width: @screen-medium) {
+    padding: 0;
+  }
+  .welcome-text {
+    text-align: center;
+  }
+
+  .intro {
+    margin: 20px auto;
+    @media (min-width: @screen-medium) {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__avatar {
+      margin: auto;
+      max-width: 200px;
+      max-height: 200px;
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+      @media (min-width: @screen-medium) {
+        flex: 1 auto;
+        max-width: 200px;
+      }
+    }
+    &__text {
+      margin: auto;
+      display: block;
+      @media (min-width: @screen-medium) {
+        max-width: 600px;
+        flex: 3 0px;
+      }
+      &-title {
+        padding-top: 10px;
+        @media (min-width: @screen-medium) {
+          padding-top: 0;
+        }
+        text-align: center;
+      }
+      &-summary, &-education {
+        padding: 10px;
+      }
+      &-label {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .secondary-cards-container {
+    @media (min-width: @screen-medium) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+  .secondary-card {
+    margin: 20px 0;
+    @media (min-width: @screen-medium) {
+      flex: 0 0 48%;
+      &--skills {
+        margin: 0;
+        flex-basis: 100%;
+      }
+    }
+    .skill-category {
+      margin: 0;
+      &-header {
+        margin: 10px 5px;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}
