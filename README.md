@@ -11,7 +11,7 @@ cd login-page
 npm install
 npm start
 ```
-This will start in a developer environment, which has live reload support. To test the static production build, run
+This will start in a developer environment at `http://localhost:3000`, which has live reload support. To test the static production build, run
 ```sh
 npm run start-static
 ```
